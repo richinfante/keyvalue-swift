@@ -8,13 +8,13 @@ extension KeyValueViewer {
         for (key,value):(String, JSON) in json {
             for item in data {
                 if item.key == key {
-                    item.key = value.stringValue
+                    item.localizedKey = value.stringValue
                 }
             }
         }
         self.sort()
     }
-
+    
     ///Sets the keys using a SwiftyJSON dictionary.
     ///Orders them alphabetically by key.
     func setDictionary(json: JSON){
